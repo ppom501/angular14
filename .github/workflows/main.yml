@@ -41,6 +41,6 @@ jobs:
         run:
           npm install -force
       - name: Build 
-        run: npm run build --base-href=/angular14/
+        run: npm run build --base-href=/gh-pages/
       - name: deploy angular14
         run: npm run deploy
