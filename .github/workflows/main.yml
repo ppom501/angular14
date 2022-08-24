@@ -28,4 +28,4 @@ jobs:
       - name: Build 
         run: npm run build
       - name: deploy angular14
-        run: ng run deploy 
+        run: ng deploy --base-href=/adngular14/
