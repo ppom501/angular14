@@ -42,4 +42,4 @@ jobs:
       - name: Build
         run: npm run build 
       - name: deploy
-        run: npm run deploy
+        run: ng deploy --base-href=/angular-ci-cd-with-github-actions/
