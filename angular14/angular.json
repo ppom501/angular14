@@ -96,6 +96,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/angular14/",
+            "name": "ppom",
+            "email": "ppom501@hotmail.com"
+          }
         }
       }
     }
