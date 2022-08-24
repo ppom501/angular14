@@ -33,12 +33,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
+      
       - name: install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          npm install
+          npm install -force
       - name: Build 
         run: npm run build --base-href=/angular14/
       - name: deploy angular14
