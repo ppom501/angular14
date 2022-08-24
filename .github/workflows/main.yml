@@ -42,4 +42,5 @@ jobs:
           npm install -force
       - name: Build 
         run: npm run build --base-href=/angular14/
-
+      - name: depoly 
+        run: npm run deploy
