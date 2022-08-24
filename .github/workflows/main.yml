@@ -39,9 +39,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
           npm install
-      - name: Build 1
-        run: npm run build 
-      - name: Build 2
+      # - name: Build 1
+      #   run: npm run build 
+      - name: Build
         run: ng build --output-path docs --base-href /angular14/
       - name: deploy angular14
         run: ng deploy --base-href=/angular14/
