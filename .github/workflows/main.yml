@@ -1,4 +1,4 @@
-name: adngular14
+name: angular14
 
 on:
   push:
@@ -15,11 +15,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # caching node_modules
+          path: node_modules 
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-  
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          
+      - name: npm cache clean
+        run: npm cache clean --force
       - name: install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,4 +43,4 @@ jobs:
       - name: Build 
         run: npm run build --base-href=/angular14/
       - name: deploy angular14
-        run: ng run deploy
+        run: npm run deploy
