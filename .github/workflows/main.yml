@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          npm install -force
+          npm install
       - name: Build 
         run: npm run build --base-href=/angular14/
       - name: deploy angular14
