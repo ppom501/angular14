@@ -28,4 +28,4 @@ jobs:
       - name: Build 
         run: npm run build
       - name: deploy angular14
-        run: npx ngh --dir=dist/adngular14
+        run: ng deploy --base-href=/gh-pages/
