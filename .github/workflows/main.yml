@@ -41,5 +41,5 @@ jobs:
           npm install
       - name: Build
         run: npm run build 
-      - name: deploy
-        run: ng deploy --base-href=/dist/angular14/
+      - name: deploy angular14
+        run: ng deploy --base-href=/angular14/
