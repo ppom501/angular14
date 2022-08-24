@@ -28,4 +28,4 @@ jobs:
       - name: Build 
         run: npm run build
       - name: deploy angular14
-        run: npm run deploy
+        run: npx ngh --dir=dist/adngular14
