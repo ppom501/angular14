@@ -33,7 +33,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      
+      - name: npm cache clean
+        run: npm cache clean --force
       - name: install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
