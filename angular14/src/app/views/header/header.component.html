@@ -1,0 +1,36 @@
+<div class="header-a">
+  <div class=" container_width"  fxLayout="row" fxLayoutAlign="space-between center" >
+
+  <!--最左邊-->
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item color="primary" [routerLink]="item.link" routerLinkActive="router-link-active"
+              *ngFor="let item of menuList">
+        {{ item.name }}
+      </button>
+    </mat-menu>
+  </div>
+  <!--    中間-->
+  <div class="logo-img"><img src="/assets/imgs/logo-wistron.png"></div>
+
+  <!--    最右邊-->
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>mail</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>person_filled</mat-icon>
+    </button>
+  </div>
+
+
+</div>
+
+</div>
+

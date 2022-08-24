@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+
+
+/*clss*/
+
+
+
+.main-height{
+  min-height: 90vh;
+  background: aqua;
+}
+
+
+/* app.component.css */
+.ironman-link-item {
+  cursor: pointer;
+  margin: 0px 10px 0px 10px;
+}
+
+.router-link-active {
+  font-weight: 700;
+  font-size: large;
+  text-decoration: underline;
+}
+
+.container_width{
+  width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .container_width{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .container_width{
+    width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container_width{
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .container_width{
+    width: 960px;
+  }
+}
+
+
+@media only screen and (min-width: 1199px) {
+  .container_width{
+    width: 1140px;
+  }
+}
+
+
+
+
